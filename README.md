@@ -4,8 +4,6 @@ A modernized macOS fork of [Atari800MacX](https://github.com/atarimacosx/Atari80
 macOS 13+ (arm64/x86_64) with aggressive adoption of Apple's current frameworks, toolchains,
 and hardware.
 
----
-
 ## Standing on Shoulders
 
 This project would not exist without the work of an extraordinary community of developers who
@@ -35,13 +33,11 @@ These people gave their time freely, and the Atari community is better for it.
 
 We are grateful for all of it.
 
----
-
 ## What FujiFoundation Is
 
 FujiFoundation is a fork of [atarimacosx/Atari800MacX](https://github.com/atarimacosx/Atari800MacX)
-with a specific, focused goal: **aggressive modernization for Apple's current architecture
-and standards**.
+with a specific, focused goal: aggressive modernization for Apple's current architecture
+and standards.
 
 The original codebase accumulated a lot of legacy over the years — Carbon APIs, old NIB
 files, manual memory management patterns that predate ARC, an SDL-based renderer that
@@ -49,7 +45,7 @@ bypassed Metal entirely. None of that is a criticism; it reflects the reality of
 a long-lived project across many macOS generations. But with Apple Silicon now the primary
 target and macOS 13+ as the baseline, there is real headroom to modernize decisively.
 
-Our approach:
+Changes made so far:
 
 - **Metal-native rendering** — the SDL renderer and surface path are gone; frames go
   directly to a MTKView via a Metal pipeline
@@ -60,15 +56,13 @@ Our approach:
 - **Current Xcode toolchain** — project file modernized for Xcode 15+, XIBs replacing NIBs,
   `UniformTypeIdentifiers` replacing deprecated type APIs, weak-linked Carbon for the
   remaining keyboard layout calls
-- **Notarization-ready** — entitlements, export config, and a build script for full
+- **Notarization-ready** — entitlements, export config, and a build script for a full
   Archive → Export → DMG → Notarize → Staple pipeline
 - **VBXE emulation** — Video Board XE support derived from Avery Lee's Altirra implementation
   (see [LEGAL.md](LEGAL.md))
 
 See [MODERNIZATION_BLUEPRINT.md](MODERNIZATION_BLUEPRINT.md) for the full phase-by-phase
 record of changes from the upstream fork.
-
----
 
 ## Our Intent
 
@@ -89,10 +83,8 @@ upstream or to other forks, all the better.
 We plan to actively maintain this fork, track upstream changes from
 [atarimacosx/Atari800MacX](https://github.com/atarimacosx/Atari800MacX), and continue
 pushing the modernization forward. We are genuinely open to input — if you have ideas about
-where this should go, issues you've found, or improvements you want to contribute, we want
+where this should go, issues you have found, or improvements you want to contribute, we want
 to hear from you.
-
----
 
 ## Building
 
@@ -106,20 +98,16 @@ DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer \
 
 Build configurations: `Development` / `Deployment` / `Default` (not Debug/Release).
 
----
-
 ## Repository Layout
 
 ```
-atari800-MacOSX/        ← Xcode project, source, XIBs, assets, SDL2.framework
-scripts/                ← build and release automation
-ExportOptions.plist     ← notarization export config
-MODERNIZATION_BLUEPRINT.md ← phase-by-phase modernization history
-LEGAL.md                ← third-party attribution (Altirra VBXE, Ultimate 1MB)
-LICENSE                 ← GPL v2
+atari800-MacOSX/           Xcode project, source, XIBs, assets, SDL2.framework
+scripts/                   build and release automation
+ExportOptions.plist        notarization export config
+MODERNIZATION_BLUEPRINT.md phase-by-phase modernization history
+LEGAL.md                   third-party attribution (Altirra VBXE, Ultimate 1MB)
+LICENSE                    GPL v2
 ```
-
----
 
 ## Upstream
 
@@ -131,8 +119,6 @@ git remote add upstream https://github.com/atarimacosx/Atari800MacX.git
 git fetch upstream
 git merge upstream/master
 ```
-
----
 
 ## License
 
