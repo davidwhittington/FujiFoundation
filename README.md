@@ -4,23 +4,25 @@ A modernized macOS fork of [Atari800MacX](https://github.com/atarimacosx/Atari80
 macOS 13+ (arm64/x86_64) with aggressive adoption of Apple's current frameworks, toolchains,
 and hardware.
 
+---
+
 ## Standing on Shoulders
 
 This project would not exist without the work of an extraordinary community of developers who
 have dedicated decades to preserving and advancing Atari 8-bit emulation. We want to be
 explicit about that.
 
-**David Firth** created Atari800 — the emulator at the core of everything here. His original
+**David Firth** created Atari800, the emulator at the core of everything here. His original
 work in the early 1990s set the foundation for what became one of the most accurate and
 comprehensive Atari 8-bit emulators ever written.
 
 **Perry McFarlane** is the author of the macOS port (Atari800MacX) and contributed an
-enormous body of work to the Atari800 core itself — cycle-exact ANTIC/GTIA emulation,
+enormous body of work to the Atari800 core itself, including cycle-exact ANTIC/GTIA emulation,
 sound improvements, hardware expansions, SDL refinements, and much more. This project is
 built directly on his macOS port, and his fingerprints are everywhere in the codebase.
 
 **Mark Grebe** wrote the initial Mac OS X support and many of the platform-specific features
-that made Atari800MacX a polished, native Mac application — including H: device support,
+that made Atari800MacX a polished, native Mac application, including H: device support,
 multiple disk sets, save state improvements, and XEP80 emulation.
 
 **Petr Stehlik** has coordinated the Atari800 project since 1998, maintaining the broader
@@ -28,10 +30,12 @@ ecosystem and keeping the project moving forward across platforms and decades.
 
 **Piotr Fusik**, **Tomasz Krasuski**, **Jacek Poplawski**, **Avery Lee** (Altirra), and a
 long list of contributors spanning 30+ years have collectively made Atari800 what it is.
-See [DOC/CREDITS](atari800-MacOSX/DOC/CREDITS) for the full list — it is worth reading.
+See [DOC/CREDITS](atari800-MacOSX/DOC/CREDITS) for the full list. It is worth reading.
 These people gave their time freely, and the Atari community is better for it.
 
 We are grateful for all of it.
+
+---
 
 ## What FujiFoundation Is
 
@@ -39,8 +43,8 @@ FujiFoundation is a fork of [atarimacosx/Atari800MacX](https://github.com/atarim
 with a specific, focused goal: aggressive modernization for Apple's current architecture
 and standards.
 
-The original codebase accumulated a lot of legacy over the years — Carbon APIs, old NIB
-files, manual memory management patterns that predate ARC, an SDL-based renderer that
+The original codebase accumulated a lot of legacy over the years, including Carbon APIs, old NIB
+files, manual memory management patterns that predate ARC, and an SDL-based renderer that
 bypassed Metal entirely. None of that is a criticism; it reflects the reality of maintaining
 a long-lived project across many macOS generations. But with Apple Silicon now the primary
 target and macOS 13+ as the baseline, there is real headroom to modernize decisively.
@@ -64,6 +68,8 @@ Changes made so far:
 See [MODERNIZATION_BLUEPRINT.md](MODERNIZATION_BLUEPRINT.md) for the full phase-by-phase
 record of changes from the upstream fork.
 
+---
+
 ## Our Intent
 
 The motivation for this work is twofold.
@@ -71,7 +77,7 @@ The motivation for this work is twofold.
 First, we have other projects in development that build on FujiFoundation as a base. The
 details of those projects will become more public as they take shape, but the underlying
 idea is that a well-maintained, modernized macOS Atari 800 emulator core is a genuinely
-useful foundation for other things. FujiFoundation is that foundation — the part we can
+useful foundation for other things. FujiFoundation is that foundation, the part we can
 keep public, open, and GPL v2, regardless of what gets built on top of it.
 
 Second, we want to give something back. The Atari emulation community has produced
@@ -82,9 +88,11 @@ upstream or to other forks, all the better.
 
 We plan to actively maintain this fork, track upstream changes from
 [atarimacosx/Atari800MacX](https://github.com/atarimacosx/Atari800MacX), and continue
-pushing the modernization forward. We are genuinely open to input — if you have ideas about
+pushing the modernization forward. We are genuinely open to input. If you have ideas about
 where this should go, issues you have found, or improvements you want to contribute, we want
 to hear from you.
+
+---
 
 ## Building
 
@@ -98,6 +106,8 @@ DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer \
 
 Build configurations: `Development` / `Deployment` / `Default` (not Debug/Release).
 
+---
+
 ## Repository Layout
 
 ```
@@ -108,6 +118,8 @@ MODERNIZATION_BLUEPRINT.md phase-by-phase modernization history
 LEGAL.md                   third-party attribution (Altirra VBXE, Ultimate 1MB)
 LICENSE                    GPL v2
 ```
+
+---
 
 ## Upstream
 
@@ -120,10 +132,12 @@ git fetch upstream
 git merge upstream/master
 ```
 
+---
+
 ## License
 
 GPL v2. See [LICENSE](LICENSE) and [LEGAL.md](LEGAL.md).
 
 This project inherits the GPL v2 license of Atari800 and Atari800MacX. Third-party
-components (Altirra VBXE, Ultimate 1MB) are also GPL v2 — see [LEGAL.md](LEGAL.md) for
+components (Altirra VBXE, Ultimate 1MB) are also GPL v2. See [LEGAL.md](LEGAL.md) for
 attribution and specifics.
